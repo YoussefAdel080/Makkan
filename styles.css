@@ -111,6 +111,8 @@ h1
   align-items: center;
   padding:0.5rem 1.5rem;
   box-shadow: 0px 0px 20px 10px rgb(189, 189, 189,0.2);
+  animation: fadeInAnimation linear;
+  animation-duration: 0.75s;
 }
 
 .nav-list
@@ -136,6 +138,12 @@ h1
 }
 
 /* ************* */
+.hero-section
+{
+  animation: fadeInAnimation linear;
+  animation-duration: 1s;
+}
+
 .hero-content
 {
   width: 50%;
@@ -168,58 +176,90 @@ h1
 .hero-slider
 {
   width: 50%;
-  position: relative;
+  position:relative;
 }
 
-.slider-images-container
+.hero-slider-images-container,
+.hero-slider-track,
+.hero-slider-image,
+.hero-slider-image img
 {
   width: 100%;
   height: 100%;
-  display: flex;
+}
+
+.hero-slider-images-container
+{
   overflow: hidden;
 }
 
-.slider-images-container img
+.hero-slider-track
 {
-  width: 100%;
-  height: 100%;
-  transition: order 1s;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  transition: all 0.75s;
 }
 
-
-.hero-slider .slider-arrow-container
+.hero-slider-image
 {
-  cursor: pointer;
+  flex: 0 0 100%; 
+}
+
+.hero-slider-image img
+{
+  object-fit: cover;
+}
+
+.slider-arrow-container,
+.testimonail-slider-arrow-container,
+.testimonail-slider-arrow--disabled,
+.slider-arrow--disabled 
+{
   width: 50px;
   height: 50px;
-  background-color: var(--primary);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: -3%;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
-.slider-arrow-container:hover
+.slider-arrow-container,
+.slider-arrow--disabled 
+{
+  left: -25px;
+}
+
+.slider-arrow-container,
+.testimonail-slider-arrow-container
+{
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.slider-arrow-container:hover,
+.testimonail-slider-arrow-container:hover
 {
   background-color: var(--dark);
   transition: all 0.5s;
 }
 
-.slider-arrow-container i
+.slider-arrow--disabled,
+.testimonail-slider-arrow--disabled
 {
-  color: #fff;
-  font-size: 1.2rem;
+  background-color: gray;
 }
 
-.hero-slider .left-arrow
+.hero-slider-left-arrow
 {
   top: 40%;
   
 }
 
-.hero-slider .right-arrow
+.hero-slider-right-arrow
 {
   top: 50%;
 }
@@ -234,6 +274,9 @@ h1
   padding: 2rem 8rem;
   gap: 0.5rem;
   margin-bottom: 45px;
+  animation: fadeInAnimation linear;
+  animation-timeline: view();
+  animation-range: entry;
 }
 
 .search-section input,
@@ -279,11 +322,19 @@ h1
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  animation: fadeInAnimation linear , slideUpAnimation linear;
+  animation-timeline: view();
+  animation-range-start: entry;
+  animation-range-end: 200px;
 }
 
 .properties-section p
 {
   color: #666565;
+  animation: fadeInAnimation  linear, slideUpAnimation linear;
+  animation-timeline: view();
+  animation-range-start: entry;
+  animation-range-end: 210px;
 }
 
 .properties-container
@@ -335,7 +386,10 @@ h1
   flex-grow: 1;
   width: 20%;
   border-radius: 5px;
+  opacity: 0;
 }
+
+
 
 .property-outer:hover
 {
@@ -367,6 +421,7 @@ h1
 {
   width: 43%;
   position: relative;
+  opacity: 0;
 }
 
 .about-img-container::before
@@ -390,7 +445,11 @@ h1
 .about-section-content
 {
   width: 50%;
+  opacity: 0;
+  animation-delay: 0.5s;
 }
+
+
 
 .about-section-content .title
 {
@@ -451,6 +510,7 @@ h1
 .property-card
 {
   width: 32%;
+  opacity: 0;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 0px 20px 10px rgb(189, 189, 189,0.2);
@@ -607,11 +667,14 @@ h1
 {
   width: 50%;
   border-radius: 5px;
+  opacity: 0;
 }
 
 .contact-us-content
 {
   width: 45%;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 
 .contact-us-content h2
@@ -655,6 +718,7 @@ h1
 .property-agent
 {
   width: 25%;
+  opacity: 0;
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 0px 0px 20px 10px rgb(189, 189, 189,0.2);
@@ -694,6 +758,118 @@ h1
 .property-agent-footer p
 {
   font-size: 0.95rem;
+}
+/* *************** */
+.testimonail-section,
+.testimonail-slider,
+.testimonail-slider-track
+{
+  width: 100%;
+}
+
+.testimonail-slider-container
+{
+  margin: auto;
+  width: 90%;
+  overflow: hidden;
+}
+
+.testimonail-section
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.testimonail-section h2
+{
+  font-weight: 700;
+}
+
+.testimonail-section > p
+{
+  text-align: center;
+}
+
+.testimonail-section > * + *
+{
+  margin-top: 1.5rem;
+}
+
+
+.testimonail-slider-track
+{
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.75s;
+}
+
+.testimonail-slider-slide
+{
+  flex: 0 0 49%;
+}
+
+
+.testimonial-card
+{
+  border-radius: 5px;
+  border: 20px solid #EFFDF5;
+}
+
+.testimonial-card-inner
+{
+  border: 1px dashed rgba(0,185,142,.3);
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+
+.testimonial-card-inner > * + *
+{
+  margin-top: 1rem;
+}
+
+.testimonial-card-footer
+{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-card-img
+{
+  width: 50px;
+  min-height: 50px;
+  border-radius: 5px;
+}
+
+.testimonial-card-info h3
+{
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.testimonial-card-info p
+{
+  color: #666565;
+}
+
+.testimonail-slider
+{
+  position: relative;
+  
+}
+
+.testimonial-slider-left-arrow,
+.testimonial-slider-right-arrow
+{
+  top: 45%;
+}
+
+.testimonial-slider-right-arrow
+{
+  right: 0%;
 }
 /* *************** */
 .footer-section
@@ -1030,4 +1206,65 @@ h1
 {
   color: #fff;
   font-size: 1rem;
+}
+
+/********** Animations **********/
+.fade-in_slide-up
+{
+  animation-name: fadeInAnimation , slideUpAnimation;
+  animation-timing-function: linear , linear;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s , 0.5s;
+}
+
+.fade-in_slide-right
+{
+  animation-name: fadeInAnimation , slideRightAnimation;
+  animation-timing-function: linear , linear;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s , 0.5s;
+}
+
+.fade-in_slide-left
+{
+  animation-name: fadeInAnimation , slideLeftAnimation;
+  animation-timing-function: linear , linear;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s , 0.5s;
+}
+
+.fade-in{
+  animation-name: fadeInAnimation;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideLeftAnimation {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-100%);}
+}
+
+@keyframes slideRightAnimation {
+  0%{transform: translateX(-100%);}
+  100%{transform: translateX(0%);}
+}
+
+@keyframes slideLeftAnimation {
+  0%{transform: translateX(100%);}
+  100%{transform: translateX(0%);}
+}
+
+@keyframes slideUpAnimation {
+  from{transform: translateY(50%);}
+  to{transform: translateY(0);}
 }

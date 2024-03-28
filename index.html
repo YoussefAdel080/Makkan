@@ -77,14 +77,27 @@
         </div>
 
         <div class="hero-slider">
-            <div class="slider-images-container">
-                <img src="assets/img/carousel-1.jpg" alt="">
-                <img src="assets/img/carousel-2.jpg" alt="">
+            <div class="hero-slider-images-container">
+                <ul class='hero-slider-track' id="herosSliderTrack">
+                    <li class="hero-slider-image">
+                        <img src="assets/img/carousel-1.jpg" alt="">
+                    </li>
+                    <li class="hero-slider-image">
+                        <img src="assets/img/carousel-2.jpg" alt="">
+                    </li> 
+                    <li class="hero-slider-image">
+                        <img src="assets/img/carousel-1.jpg" alt="">
+                    </li>
+                    <li class="hero-slider-image">
+                        <img src="assets/img/carousel-2.jpg" alt="">
+                    </li>   
+                </ul>
+                
             </div>
-            <div class="slider-arrow-container left-arrow" id="heroSliderPreviousBtn">
+            <div class="slider-arrow--disabled hero-slider-left-arrow" id="heroSliderPreviousBtn">
                 <i class="fa-solid fa-chevron-left"></i>
             </div>
-            <div class="slider-arrow-container right-arrow" id="heroSliderNextBtn">
+            <div class="slider-arrow-container hero-slider-right-arrow" id="heroSliderNextBtn">
                 <i class="fa-solid fa-chevron-right"></i>
             </div>
         </div>
@@ -177,7 +190,7 @@
         </div>
     </section>
 
-    <section class="container about-section">
+    <section class="container about-section" id="about-section">
         <div class="about-img-container">
             <img src="assets/img/about.jpg" alt="">
         </div>
@@ -412,7 +425,7 @@
 
     <section class="container contact-us-section">
         <div class="contact-us-main-container">
-            <div class="contact-us-inner">
+            <div class="contact-us-inner" id="contact-us">
                 <img src="assets/img/call-to-action.jpg" alt="" class="contact-us-img">
                 <div class="contact-us-content">
                     <h2 class="title">Contact With Our <br>Certified Agent</h2>
@@ -431,7 +444,7 @@
     </section>
 
     <section class="container property-agent-section">
-        <div class="property-agent-heading">
+        <div class="property-agent-heading" id="property-agent-heading">
             <h2 class="title">Property Agents</h2>
             <p class="sub-title">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd <br>vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
         </div>
@@ -529,6 +542,112 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="container">
+        <div class="testimonail-section" id="testimonial-section">
+            <h2 class="title">Our Clients Say!</h2>
+            <p class="sub-title">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd <br>vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+        
+
+        <div class="testimonail-slider">
+            <div class="testimonail-slider-container">
+                <ul class="testimonail-slider-track" id="testimonailSliderTrack">
+                    <li class="testimonail-slider-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-inner">
+                                <p class="sub-title">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>    
+                                <div class="testimonial-card-footer">
+                                    <img src="assets/img/testimonial-2.jpg" alt="" class="testimonial-card-img">
+                                    <div class="testimonial-card-info">
+                                        <h3>Client Name</h3>
+                                        <p><small>Profession</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="testimonail-slider-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-inner">
+                                <p class="sub-title">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>    
+                                <div class="testimonial-card-footer">
+                                    <img src="assets/img/testimonial-3.jpg" alt="" class="testimonial-card-img">
+                                    <div class="testimonial-card-info">
+                                        <h3>Client Name</h3>
+                                        <p><small>Profession</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="testimonail-slider-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-inner">
+                                <p class="sub-title">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>    
+                                <div class="testimonial-card-footer">
+                                    <img src="assets/img/testimonial-2.jpg" alt="" class="testimonial-card-img">
+                                    <div class="testimonial-card-info">
+                                        <h3>Client Name</h3>
+                                        <p><small>Profession</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="testimonail-slider-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-inner">
+                                <p class="sub-title">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>    
+                                <div class="testimonial-card-footer">
+                                    <img src="assets/img/testimonial-3.jpg" alt="" class="testimonial-card-img">
+                                    <div class="testimonial-card-info">
+                                        <h3>Client Name</h3>
+                                        <p><small>Profession</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="testimonail-slider-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-inner">
+                                <p class="sub-title">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>    
+                                <div class="testimonial-card-footer">
+                                    <img src="assets/img/testimonial-2.jpg" alt="" class="testimonial-card-img">
+                                    <div class="testimonial-card-info">
+                                        <h3>Client Name</h3>
+                                        <p><small>Profession</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="testimonail-slider-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card-inner">
+                                <p class="sub-title">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>    
+                                <div class="testimonial-card-footer">
+                                    <img src="assets/img/testimonial-3.jpg" alt="" class="testimonial-card-img">
+                                    <div class="testimonial-card-info">
+                                        <h3>Client Name</h3>
+                                        <p><small>Profession</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="testimonail-slider-arrow--disabled testimonial-slider-left-arrow" id="testimonialSliderPreviousBtn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="testimonail-slider-arrow-container testimonial-slider-right-arrow" id="testimonialSliderNextBtn">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </div>
+    </div>
     </section>
 
     <footer class="container footer-section">
